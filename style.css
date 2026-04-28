@@ -16,15 +16,23 @@ main {
   width: 100%;
   max-width: 450px;
   margin: 0 auto;
+  padding: 0 var(--space-4);
   background-color: var(--background-color);
   overflow-y: auto;
   overflow-x: auto;
   font-family: var(--main-font);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-areas: "header" "hero" "body" "footer";
 }
 
 header {
-  height: 100vh;
+  grid-area: "header";
+  min-height: 100vh;
+  height: auto;
   width: 100%;
+  display: flex;
+  flex-direction: column;
   position: relative;
 }
 
@@ -50,7 +58,6 @@ nav button {
   padding: 16px 29px;
   border-radius: 10px;
   margin: 20px;
-  margin-left: var(--space-4);
   margin-right: 0px;
   white-space: nowrap; /* Prevents text from wrapping to a second line */
   overflow: hidden; /* Ensures text doesn't spill out if the button has a fixed width */
@@ -60,18 +67,18 @@ nav button {
 nav i {
   background-color: var(--primary-color);
   color: var(--font-color);
-  margin: 20px 10px;
+  margin: 20px;
   padding: 16px;
   border-radius: 10px;
 }
 
 .overlay {
-  height: 100%;
+  width: 100%;
+  height: 150vh;
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./section/img1.webp");
   border-radius: 20px;
   background-size: cover;
   background-position: center;
-  margin: var(--space-2) var(--space-2);
   padding: 0 var(--space-8);
 }
 .overlay .content {
@@ -79,7 +86,7 @@ nav i {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 70%;
+  padding-top: 20vh;
 }
 .overlay .content h1 {
   font-size: clamp(2.5rem, 8vw, 4rem);
@@ -94,6 +101,7 @@ nav i {
 }
 
 .cards {
+  margin: 20px 0px;
   border-radius: 20px;
   background-color: var(--background-color);
   color: var(--font-color);
@@ -146,13 +154,12 @@ nav i {
 }
 
 .logo-slider {
-  width: 1000;
+  width: 100%;
   height: auto;
   display: flex;
   flex-direction: row;
   gap: var(--space-4);
   align-items: center;
-  margin: var(--space-8) var(--space-2);
   overflow: hidden;
   white-space: nowrap;
 }
@@ -180,6 +187,42 @@ nav i {
   border: none;
 }
 
+.about {
+  width: 100%;
+  height: 100%;
+  margin: var(--space-2) 0px;
+}
+.about .aboutimg {
+  width: 100%;
+  height: 50vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./img/2.avif");
+  background-color: aqua;
+  border-radius: 20px;
+  background-size: cover;
+  background-position: center;
+}
+.about .aboutcontent {
+  background-color: var(--primary-color);
+  color: var(--font-color);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: var(--space-4) var(--space-8);
+  margin: var(--space-4) 0px;
+  border-radius: 20px;
+}
+.about .aboutcontent h2 {
+  font-size: clamp(2.5rem, 8vw, 4rem);
+  letter-spacing: 2px;
+  line-height: 1.1;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+.about .aboutcontent p {
+  font-size: clamp(1.25rem, 4vw, 1.25rem);
+  line-height: 1.5;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -191,4 +234,52 @@ nav i {
 html, body {
   height: 100%;
   width: 100%;
+}
+
+section.hero {
+  grid-area: "hero";
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  color: white;
+}
+section.hero h1 {
+  font-size: clamp(2.5rem, 8vw, 4rem);
+  letter-spacing: 2px;
+  text-align: center;
+  margin: auto;
+}
+section.hero .brand1, section.hero .brand2, section.hero .brand3, section.hero .brand4 {
+  max-width: 450px;
+  height: 50vh;
+  background-size: cover;
+  background-position: center;
+  border-radius: 20px;
+  margin: var(--space-4) 0px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+section.hero .brand1 {
+  background-image: url("./img/3.avif");
+}
+section.hero .brand2 {
+  background-image: url("./img/4.avif");
+}
+section.hero .brand3 {
+  background-image: url("./img/5.avif");
+}
+section.hero .brand4 {
+  background-image: url("./img/6.avif");
+}
+section.hero .brand-logo {
+  width: 60px; /* Set your size here */
+  height: 60px;
+  color: #FFFFFF; /* This now controls the SVG color! */
+}
+section.hero .brand-logo .svg {
+  width: 60px; /* Set your size here */
+  height: 60px;
 }/*# sourceMappingURL=style.css.map */

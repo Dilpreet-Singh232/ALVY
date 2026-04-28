@@ -1,0 +1,57 @@
+
+    section.hero{
+      grid-area: "hero";
+      min-height: 100vh;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      color: white;
+       h1{
+      font-size: clamp(2.5rem, 8vw, 4rem);
+      letter-spacing: 2px;
+     // font-family: var(--main-font);
+      text-align: center;
+      margin: auto;
+ }
+
+
+.brand1, .brand2, .brand3, .brand4{
+     max-width: 450px;
+      height: 50vh;
+      background-size: cover;
+      background-position: center;
+      border-radius: 20px;
+      margin: var(--space-4) 0px;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+    
+
+}
+.brand1{
+      background-image: url("./img/3.avif");
+}
+.brand2{
+      background-image: url("./img/4.avif");
+}
+.brand3{
+      background-image: url("./img/5.avif");
+}
+.brand4{
+      background-image: url("./img/6.avif");
+}
+
+
+
+  .brand-logo {
+  width: 60px;   /* Set your size here */
+  height: 60px;
+  color: #FFFFFF; /* This now controls the SVG color! */
+  
+.svg {
+      width: 60px;   /* Set your size here */
+      height: 60px;
+}
+}
+    }

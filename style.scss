@@ -1,4 +1,5 @@
-@use "./layout/_main.scss";
-@use "./layout/utils/_utils.scss";
+@use "./layout/main.scss";
+@use "./utils/utils";
 @use "./section/header.scss";
 @use "./layout/body.scss";
+@use "./section/hero.scss";
