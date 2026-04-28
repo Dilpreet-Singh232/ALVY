@@ -28,8 +28,8 @@ main {
 
 header {
   grid-area: "header";
-  min-height: 100vh;
-  height: auto;
+  min-height: 90vh;
+  max-height: auto;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -40,6 +40,9 @@ nav {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
+  width: 100%;
+  margin-right: 0px;
+  top: 0px;
 }
 nav h1 {
   font-size: 19px;
@@ -51,30 +54,32 @@ nav h1 {
 nav .menu {
   display: flex;
   flex-direction: row;
+  position: absolute;
+  right: 10px;
 }
-nav button {
+nav .menu button {
   background-color: var(--secondary-color);
   font-weight: 600;
   padding: 16px 29px;
   border-radius: 10px;
   margin: 20px;
-  margin-right: 0px;
+  margin-right: 10px;
   white-space: nowrap; /* Prevents text from wrapping to a second line */
   overflow: hidden; /* Ensures text doesn't spill out if the button has a fixed width */
   text-overflow: ellipsis;
   border: none;
 }
-nav i {
+nav .menu i {
   background-color: var(--primary-color);
   color: var(--font-color);
-  margin: 20px;
+  margin: 20px 0px;
   padding: 16px;
   border-radius: 10px;
 }
 
 .overlay {
   width: 100%;
-  height: 150vh;
+  height: 100vh;
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./section/img1.webp");
   border-radius: 20px;
   background-size: cover;
@@ -86,18 +91,19 @@ nav i {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 20vh;
+  padding-top: 30vh;
 }
 .overlay .content h1 {
-  font-size: clamp(2.5rem, 8vw, 4rem);
-  letter-spacing: 2px;
-  line-height: 1.1;
-  margin-bottom: 20px;
+  font-size: clamp(2rem, 8vw, 4rem);
+  letter-spacing: 1px;
+  line-height: 1;
+  margin-bottom: 10px;
   font-weight: 500;
 }
 .overlay .content p {
   font-size: clamp(1.25rem, 4vw, 1.25rem);
   line-height: 1.5;
+  margin: var(--space-8) 0px;
 }
 
 .cards {
@@ -116,7 +122,7 @@ nav i {
 .card1 {
   display: flex;
   flex-direction: column;
-  margin: 10px var(--space-2);
+  margin: 10px 0px;
   padding: var(--space-8) var(--space-4);
   gap: 30px;
   background-color: var(--primary-color);
@@ -126,7 +132,7 @@ nav i {
 .card2 {
   display: flex;
   flex-direction: column;
-  margin: 10px var(--space-2);
+  margin: 10px 0px;
   padding: var(--space-8) var(--space-4);
   gap: 30px;
   background-color: var(--primary-color);
@@ -136,7 +142,7 @@ nav i {
 .card3 {
   display: flex;
   flex-direction: column;
-  margin: 10px var(--space-2);
+  margin: 10px 0px;
   padding: var(--space-8) var(--space-4);
   gap: 30px;
   background-color: var(--primary-color);
@@ -146,7 +152,7 @@ nav i {
 .card4 {
   display: flex;
   flex-direction: column;
-  margin: 10px var(--space-2);
+  margin: 10px 0px;
   padding: var(--space-8) var(--space-4);
   gap: 30px;
   background-color: var(--primary-color);
@@ -207,7 +213,7 @@ nav i {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  padding: var(--space-4) var(--space-8);
+  padding: var(--space-8) var(--space-8);
   margin: var(--space-4) 0px;
   border-radius: 20px;
 }
@@ -242,7 +248,6 @@ section.hero {
   width: 100%;
   display: flex;
   flex-direction: column;
-  position: relative;
   color: white;
 }
 section.hero h1 {
@@ -274,12 +279,70 @@ section.hero .brand3 {
 section.hero .brand4 {
   background-image: url("./img/6.avif");
 }
-section.hero .brand-logo {
-  width: 60px; /* Set your size here */
-  height: 60px;
-  color: #FFFFFF; /* This now controls the SVG color! */
+section.hero .svg {
+  position: absolute;
+  top: 2%;
+  left: 6%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-section.hero .brand-logo .svg {
-  width: 60px; /* Set your size here */
-  height: 60px;
+section.hero .svg h2 {
+  font-size: clamp(2.5rem, 4vw, 2rem);
+  letter-spacing: 2px;
+  line-height: 1.1;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+.contenthero {
+  position: absolute;
+  top: 67%;
+  left: 10%;
+}
+.contenthero h2 {
+  font-size: clamp(2.5rem, 4vw, 2rem);
+  letter-spacing: 2px;
+  line-height: 1.1;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+.contenthero a {
+  text-decoration-line: none;
+  text-transform: uppercase;
+  color: var(--font-color);
+}
+
+.contact {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  display: flex;
+  flex-direction: column;
+  height: 60vh;
+  position: relative;
+  border-radius: 10px;
+}
+.contact .contactconnect {
+  position: absolute;
+  top: 3%;
+  left: 7%;
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+}
+.contact p {
+  font-size: clamp(1.25rem, 4vw, 1.25rem);
+  font-weight: 800;
+}
+.contact h2 {
+  font-size: clamp(3rem, 6vw, 2.5rem);
+  letter-spacing: 2px;
+}
+.contact button {
+  background-color: var(--primary-color);
+  color: var(--font-color);
+  border: none;
+  padding: var(--space-2) 20px;
+  border-radius: 5px;
+  margin: 0px var(--space-8);
 }/*# sourceMappingURL=style.css.map */

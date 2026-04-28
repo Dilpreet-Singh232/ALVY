@@ -5,7 +5,7 @@
       width: 100%;
       display: flex;
       flex-direction: column;
-      position: relative;
+      //position: relative;
       color: white;
        h1{
       font-size: clamp(2.5rem, 8vw, 4rem);
@@ -44,14 +44,76 @@
 
 
 
-  .brand-logo {
-  width: 60px;   /* Set your size here */
-  height: 60px;
-  color: #FFFFFF; /* This now controls the SVG color! */
   
 .svg {
-      width: 60px;   /* Set your size here */
-      height: 60px;
+     position : absolute;
+      top: 2%;
+      left: 6%;
+       display: flex;
+      flex-direction: column;
+      align-items: center;
+       h2{
+            font-size: clamp(2.5rem, 4vw, 2rem);
+            letter-spacing: 2px;
+            line-height: 1.1;
+            margin-bottom: 20px;
+            font-weight: 500;
+      }
 }
 }
-    }
+.contenthero{
+            position : absolute;
+            top:67%;
+            left: 10%;
+                h2{
+            font-size: clamp(2.5rem, 4vw, 2rem);
+            letter-spacing: 2px;
+            line-height: 1.1;
+            margin-bottom: 20px;
+            font-weight: 500;
+      }
+
+      a{
+            text-decoration-line: none;
+            text-transform: uppercase;
+            color: var(--font-color);
+            
+      }
+}
+
+.contact{
+      background-color: var(--secondary-color);
+      color: var(--primary-color);
+      display: flex;
+      flex-direction: column;
+      height: 60vh;
+      position: relative;
+      border-radius: 10px;
+      .contactconnect{
+            position:absolute;
+            top:3%;
+            left:7%;
+            display: flex;
+            gap:20px;
+            flex-direction: column;
+      }
+
+      p{
+      font-size: clamp(1.25rem, 4vw, 1.25rem);
+      font-weight: 800;
+      }
+      h2{
+      font-size: clamp(3rem, 6vw, 2.5rem);
+      letter-spacing: 2px;
+      }
+      button{
+
+            background-color: var(--primary-color);
+            color: var(--font-color);
+            border: none;
+            padding: var(--space-2) 20px;
+            border-radius: 5px;
+            margin: 0px var(--space-8);
+      }
+}
+    
